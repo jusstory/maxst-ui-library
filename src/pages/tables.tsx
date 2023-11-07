@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Button,
+  Container,
   Dropdown,
   Table,
   Title,
@@ -104,13 +105,13 @@ function tables() {
     },
   ];
   return (
-    <div>
+    <Container>
       <Title role={2} type={'title'} size={'s'}>
         Tables
       </Title>
       <br />
       <Table columnData={columns} rowData={rows} checkMode={true} />
-    </div>
+    </Container>
   );
 }
 

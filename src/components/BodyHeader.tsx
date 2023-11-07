@@ -3,12 +3,13 @@ import {
   Breadcrumb,
   Title,
   Text,
+  Container,
 } from '@maxst-designsystem/maxst-design-system';
 import { UserLineIcon } from '@maxst-designsystem/icons';
 
 function BodyHeader() {
   return (
-    <div>
+    <Container>
       {/* <ArrowForwardLineBoldIcon />
       <ArrowForwardLineIcon />
       <ArrowForwardLineLightIcon /> */}
@@ -23,12 +24,16 @@ function BodyHeader() {
       </Text>
       <div className="breadcrumb-box">
         <Breadcrumb
+          homeButton={{
+            id: 'home',
+            onMoveHome: () => console.log('home click'),
+          }}
           menuData={[
             {
               id: 'breadcrumb-01',
               label: 'breadcrumb-01',
-              onMovePage: () => console.log('move  page'),
-              onMoveSubPage: () => console.log('move sub page'),
+              onMovePage: () => console.log('/breadcrumb-01'),
+              onMoveSubPage: (data) => console.log(data),
               subMenu: [
                 {
                   id: 'breadcrumb-01-01',
@@ -41,14 +46,16 @@ function BodyHeader() {
               ],
             },
             {
-              icon: <UserLineIcon />,
               id: 'breadcrumb-02',
               label: 'breadcrumb-02',
+              icon: <UserLineIcon />,
+              onMovePage: () => console.log('/breadcrumb-02'),
             },
             {
-              disabled: true,
               id: 'breadcrumb-03',
               label: 'breadcrumb-03',
+              disabled: true,
+              onMovePage: () => console.log('/breadcrumb-03'),
             },
             {
               id: 'breadcrumb-04',
@@ -59,7 +66,7 @@ function BodyHeader() {
         />
       </div>
       <br />
-    </div>
+    </Container>
   );
 }
 
