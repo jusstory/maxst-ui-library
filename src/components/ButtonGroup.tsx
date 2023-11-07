@@ -41,8 +41,12 @@ function ButtonGroups() {
         >
           forms page로 이동
         </Button>
-        <Button size="l" type="secondary">
-          Button
+        <Button
+          size="l"
+          type="secondary"
+          onClick={() => onClickRouter('/tables')}
+        >
+          table page로 이동
         </Button>
         <Button size="m" type="tertiary" iconRight={<PlusLineIcon />}>
           Button

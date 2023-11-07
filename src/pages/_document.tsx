@@ -9,8 +9,8 @@ export default function Document() {
       <body>
         <Container>
           <BodyHeader />
+          <Main />
         </Container>
-        <Main />
         <NextScript />
       </body>
     </Html>

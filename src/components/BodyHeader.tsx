@@ -4,12 +4,7 @@ import {
   Title,
   Text,
 } from '@maxst-designsystem/maxst-design-system';
-import {
-  ArrowForwardLineBoldIcon,
-  ArrowForwardLineIcon,
-  ArrowForwardLineLightIcon,
-  UserLineIcon,
-} from '@maxst-designsystem/icons';
+import { UserLineIcon } from '@maxst-designsystem/icons';
 
 function BodyHeader() {
   return (
@@ -63,6 +58,7 @@ function BodyHeader() {
           thisPage="breadcrumb-04"
         />
       </div>
+      <br />
     </div>
   );
 }
