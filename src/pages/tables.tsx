@@ -32,9 +32,18 @@ function tables() {
     },
   ];
 
+  const moreClick = (v: any) => {
+    console.log(v);
+  };
+
   const MoreComponent = () => {
     return (
-      <Dropdown menuData={moreMenuData} align="right" id="dropdown-icon-button">
+      <Dropdown
+        menuData={moreMenuData}
+        align="right"
+        id="dropdown-icon-button"
+        onClick={moreClick}
+      >
         <Button
           type="ghost"
           size="s"
