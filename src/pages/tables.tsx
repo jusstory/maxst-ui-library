@@ -1,10 +1,12 @@
 import React from 'react';
-import BodyHeader from '@/components/BodyHeader';
+import { Title } from '@maxst-designsystem/maxst-design-system';
 
 function tables() {
   return (
     <div>
-      <BodyHeader />
+      <Title role={2} type={'title'} size={'s'}>
+        Form
+      </Title>
     </div>
   );
 }

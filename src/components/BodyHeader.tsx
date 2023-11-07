@@ -14,9 +14,9 @@ import {
 function BodyHeader() {
   return (
     <div>
-      <ArrowForwardLineBoldIcon />
+      {/* <ArrowForwardLineBoldIcon />
       <ArrowForwardLineIcon />
-      <ArrowForwardLineLightIcon />
+      <ArrowForwardLineLightIcon /> */}
       <Title type="title" size="xl" role={1}>
         Maxst design system Test
       </Title>
@@ -24,7 +24,7 @@ function BodyHeader() {
         Maxst design system Test
       </Title>
       <Text type="body" size="l">
-        맥스트 디자인 시스템 <b>v0.5.0</b> 컴포넌트 테스트
+        맥스트 디자인 시스템 <b>v0.5</b> 컴포넌트 테스트
       </Text>
       <div className="breadcrumb-box">
         <Breadcrumb

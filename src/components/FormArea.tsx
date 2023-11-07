@@ -81,45 +81,8 @@ function FormArea() {
   return (
     <Form id="form-login">
       <Title role={2} type={'title'} size={'s'}>
-        123
+        Form
       </Title>
-      <div className="breadcrumb-box">
-        <Breadcrumb
-          menuData={[
-            {
-              id: 'breadcrumb-01',
-              label: 'breadcrumb-01',
-              onMovePage: () => console.log('move  page'),
-              onMoveSubPage: () => console.log('move sub page'),
-              subMenu: [
-                {
-                  id: 'breadcrumb-01-01',
-                  label: 'breadcrumb-01-01',
-                },
-                {
-                  id: 'breadcrumb-01-02',
-                  label: 'breadcrumb-01-02',
-                },
-              ],
-            },
-            {
-              icon: <UserLineIcon />,
-              id: 'breadcrumb-02',
-              label: 'breadcrumb-02',
-            },
-            {
-              disabled: true,
-              id: 'breadcrumb-03',
-              label: 'breadcrumb-03',
-            },
-            {
-              id: 'breadcrumb-04',
-              label: 'breadcrumb-04',
-            },
-          ]}
-          thisPage="breadcrumb-04"
-        />
-      </div>
       <InputGroup
         fullWidth={true}
         label="Id"

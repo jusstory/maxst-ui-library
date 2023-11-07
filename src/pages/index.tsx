@@ -1,12 +1,6 @@
 import Head from 'next/head';
 import { Container, Switch } from '@maxst-designsystem/maxst-design-system';
 import ButtonGroups from '@/components/ButtonGroup';
-import BodyHeader from '@/components/BodyHeader';
-import {
-  Breadcrumb,
-  Title,
-  Text,
-} from '@maxst-designsystem/maxst-design-system';
 
 export default function Home() {
   return (
@@ -18,11 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Title type="title" size="xl" role={1}>
-          Maxst design system Test
-        </Title>
         <Container>
-          <BodyHeader />
           <br />
           <ButtonGroups />
         </Container>
