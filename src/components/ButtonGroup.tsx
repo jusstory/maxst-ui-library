@@ -17,6 +17,7 @@ function ButtonGroups() {
       router.push(page);
     }
   };
+
   const onOpen = (type: string) => {
     if (type === 'snackbar') {
       setIsOpenSnackbar(true);

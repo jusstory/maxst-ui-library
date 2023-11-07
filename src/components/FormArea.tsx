@@ -11,11 +11,13 @@ import {
   Divider,
   Dropdown,
   Title,
+  Breadcrumb,
 } from '@maxst-designsystem/maxst-design-system';
 import {
   ArrowDownLineIcon,
   CheckLineIcon,
   ArrowRightLineIcon,
+  UserLineIcon,
 } from '@maxst-designsystem/icons';
 
 type formDataType = {
@@ -81,6 +83,71 @@ function FormArea() {
       <Title role={2} type={'title'} size={'s'}>
         123
       </Title>
+      <div className="breadcrumb-box">
+        <Breadcrumb
+          menuData={[
+            {
+              id: 'breadcrumb-01',
+              label: 'breadcrumb-01',
+              onMovePage: () => console.log('move  page'),
+              onMoveSubPage: () => console.log('move sub page'),
+              subMenu: [
+                {
+                  id: 'breadcrumb-01-01',
+                  label: 'breadcrumb-01-01',
+                },
+                {
+                  id: 'breadcrumb-01-02',
+                  label: 'breadcrumb-01-02',
+                },
+              ],
+            },
+            {
+              icon: <UserLineIcon />,
+              id: 'breadcrumb-02',
+              label: 'breadcrumb-02',
+            },
+            {
+              disabled: true,
+              id: 'breadcrumb-03',
+              label: 'breadcrumb-03',
+            },
+            {
+              id: 'breadcrumb-04',
+              label: 'breadcrumb-04',
+            },
+          ]}
+          thisPage="breadcrumb-04"
+        />
+      </div>
+      <InputGroup
+        fullWidth={true}
+        label="Id"
+        helperText="helper text"
+        required={true}
+        state={idError ? 'error' : 'default'}
+      >
+        <TextField
+          id="default-textfield-01"
+          placeholder="placeholder"
+          resetButton={true}
+          onChange={onChangeId}
+        />
+      </InputGroup>
+      <InputGroup
+        fullWidth={true}
+        label="Password"
+        helperText="helper text"
+        required={true}
+        state={passwordError ? 'error' : 'default'}
+      >
+        <TextField
+          id="default-textfield-03"
+          placeholder="placeholder"
+          password={true}
+          onChange={onChangePassword}
+        />
+      </InputGroup>
       <InputGroup
         fullWidth={true}
         label="Id"

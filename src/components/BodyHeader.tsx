@@ -5,32 +5,20 @@ import {
   Text,
 } from '@maxst-designsystem/maxst-design-system';
 import {
-  UserLineIcon,
-  SortLineBoldIcon,
-  SortLineIcon,
-  SortLineLightIcon,
   ArrowForwardLineBoldIcon,
   ArrowForwardLineIcon,
   ArrowForwardLineLightIcon,
+  UserLineIcon,
 } from '@maxst-designsystem/icons';
 
 function BodyHeader() {
   return (
     <div>
-      <SortLineBoldIcon />
-      <SortLineIcon />
-      <SortLineLightIcon />
       <ArrowForwardLineBoldIcon />
       <ArrowForwardLineIcon />
       <ArrowForwardLineLightIcon />
       <Title type="title" size="xl" role={1}>
         Maxst design system Test
-      </Title>
-      <Title role={3} type="title" size="m">
-        {'새로운 Space를 먼저 생성해 주세요.'}
-      </Title>
-      <Title role={3} type="title" size="xs" className="">
-        123
       </Title>
       <Title type="title" size="l" role={2}>
         Maxst design system Test
