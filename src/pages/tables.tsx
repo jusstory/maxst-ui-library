@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Button,
   Container,
   Dropdown,
   Table,
   Title,
+  PositionModal,
+  Modal,
 } from '@maxst-designsystem/maxst-design-system';
 import {
   MoreVerticalLineIcon,
@@ -14,6 +16,9 @@ import {
 } from '@maxst-designsystem/icons';
 
 function tables() {
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [isOpenModal2, setIsOpenModal2] = useState<boolean>(false);
+
   const moreMenuData = [
     {
       id: 'label-0',
@@ -32,8 +37,18 @@ function tables() {
     },
   ];
 
-  const moreClick = (v: any) => {
-    console.log(v);
+  const dropdownClick = (menu: any) => {
+    console.log(menu);
+    if (menu.id === 'label-0') {
+      setIsOpenModal(true);
+    } else if (menu.id === 'label-1') {
+      setIsOpenModal2(true);
+    }
+  };
+
+  const onCloseModal = () => {
+    setIsOpenModal(false);
+    setIsOpenModal2(false);
   };
 
   const MoreComponent = () => {
@@ -42,7 +57,7 @@ function tables() {
         menuData={moreMenuData}
         align="right"
         id="dropdown-icon-button"
-        onClick={moreClick}
+        onClick={dropdownClick}
       >
         <Button
           type="ghost"
@@ -120,6 +135,36 @@ function tables() {
       </Title>
       <br />
       <Table columnData={columns} rowData={rows} checkMode={true} />
+      <PositionModal
+        title="title"
+        mainButton={{
+          type: 'primary',
+          text: 'ok',
+          onClick: () => console.log('main button'),
+        }}
+        open={isOpenModal}
+        onClose={onCloseModal}
+        position={{
+          top: '30%',
+          right: '20%',
+        }}
+        isArrow={true}
+        smallButtonMode={true}
+      >
+        position modal{' '}
+      </PositionModal>
+      <Modal
+        title="title"
+        mainButton={{
+          type: 'primary',
+          text: 'ok',
+          onClick: () => console.log('main button'),
+        }}
+        open={isOpenModal2}
+        onClose={onCloseModal}
+      >
+        modal
+      </Modal>
     </Container>
   );
 }

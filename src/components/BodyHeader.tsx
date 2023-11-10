@@ -10,9 +10,18 @@ import { UserLineIcon } from '@maxst-designsystem/icons';
 function BodyHeader() {
   return (
     <Container>
-      {/* <ArrowForwardLineBoldIcon />
-      <ArrowForwardLineIcon />
-      <ArrowForwardLineLightIcon /> */}
+      {/* <MinusFillIcon />
+      <MinusLineIcon />
+      <MinusLineBoldIcon />
+      <MinusLineLightIcon />
+      <ShareFillIcon />
+      <ShareLineBoldIcon />
+      <ShareLineIcon />
+      <ShareLineLightIcon />
+      <FloorFillIcon />
+      <FloorLineBoldIcon />
+      <FloorLineIcon />
+      <FloorLineLightIcon /> */}
       <Title type="title" size="xl" role={1}>
         Maxst design system Test
       </Title>
