@@ -7,6 +7,7 @@ import {
   Title,
   PositionModal,
   Modal,
+  Pagination,
 } from '@maxst-designsystem/maxst-design-system';
 import {
   MoreVerticalLineIcon,
@@ -135,6 +136,12 @@ function tables() {
       </Title>
       <br />
       <Table columnData={columns} rowData={rows} checkMode={true} />
+      <Pagination
+        onClick={() => {}}
+        onshowPageSizeChange={() => {}}
+        size="l"
+        totalPage={9}
+      />
       <PositionModal
         title="title"
         mainButton={{
