@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Container, Switch } from '@maxst-designsystem/maxst-design-system';
 import ButtonGroups from '@/components/ButtonGroup';
+import { Main } from '@/layout/main/MainStyle';
 
 export default function Home() {
   return (
@@ -11,12 +12,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <Main>
         <Container>
           <br />
           <ButtonGroups />
         </Container>
-      </main>
+      </Main>
     </>
   );
 }

@@ -10,12 +10,6 @@ import { UserLineIcon } from '@maxst-designsystem/icons';
 function BodyHeader() {
   return (
     <Container>
-      {/* <MinusLineIcon />
-      <MinusLineBoldIcon />
-      <MinusCircleFillIcon />
-      <MinusCircleLineBoldIcon />
-      <MinusCircleLineIcon />
-      <MinusCircleLineLightIcon /> */}
       <Title type="title" size="xl" role={1}>
         Maxst design system Test
       </Title>
