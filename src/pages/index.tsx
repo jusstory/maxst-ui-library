@@ -2,6 +2,20 @@ import Head from 'next/head';
 import { Container, Switch } from '@maxst-designsystem/maxst-design-system';
 import ButtonGroups from '@/components/ButtonGroup';
 import { Main } from '@/layout/main/MainStyle';
+import { Sidebar } from '@maxst-designsystem/maxst-design-system';
+import { ContentRight } from '@components/content';
+
+const sidebarData = [
+  {
+    id: 'dashboard',
+    label: 'Dashboard',
+  },
+
+  {
+    id: 'vps-tracker',
+    label: 'VPS Tracker',
+  },
+];
 
 export default function Home() {
   return (
@@ -14,8 +28,13 @@ export default function Home() {
       </Head>
       <Main>
         <Container>
-          <br />
-          <ButtonGroups />
+          <Sidebar
+            id="sidebar"
+            itemData={sidebarData}
+            selectedId="vps-tracker"
+          />
+          {/* <ButtonGroups /> */}
+          <ContentRight />
         </Container>
       </Main>
     </>
