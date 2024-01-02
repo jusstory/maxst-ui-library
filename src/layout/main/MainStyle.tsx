@@ -11,7 +11,7 @@ const Box = styled.div`
   ${({ theme }) => {
     return css`
       .font-title {
-        color: red;
+        color: blue;
       }
     `;
   }}
