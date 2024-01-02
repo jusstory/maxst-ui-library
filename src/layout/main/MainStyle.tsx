@@ -7,4 +7,14 @@ const Main = styled.main`
   }}
 `;
 
-export { Main };
+const Box = styled.div`
+  ${({ theme }) => {
+    return css`
+      .font-title {
+        color: red;
+      }
+    `;
+  }}
+`;
+
+export { Main, Box };
