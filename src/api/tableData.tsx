@@ -1,5 +1,6 @@
 import React from 'react';
 import { MoreVerticalLineIcon } from '@maxst-designsystem/icons';
+import { Dropdown, Button } from '@maxst-designsystem/maxst-design-system';
 
 export const trackerColumnData = [
   {
@@ -40,6 +41,21 @@ export const trackerColumnData = [
   },
 ];
 
+const tableRowMoreData = [
+  {
+    id: 'row-01-01',
+    label: 'row-01-01',
+  },
+  {
+    id: 'row-01-02',
+    label: 'row-01-02',
+  },
+];
+
+const onClickMoreButton = (data: any) => {
+  console.log(data);
+};
+
 export const trackerRowData = [
   {
     id: '1',
@@ -53,7 +69,19 @@ export const trackerRowData = [
     byte: '100MB',
     more: (
       <span className="more-button">
-        <MoreVerticalLineIcon />
+        <Dropdown
+          id="more-dropdown-1"
+          menuData={tableRowMoreData}
+          align="right"
+          onClick={onClickMoreButton}
+        >
+          <Button
+            type="ghost"
+            size="l"
+            isIconMode={true}
+            iconOnly={<MoreVerticalLineIcon />}
+          />
+        </Dropdown>
       </span>
     ),
   },
@@ -69,7 +97,18 @@ export const trackerRowData = [
     byte: '100MB',
     more: (
       <span className="more-button">
-        <MoreVerticalLineIcon />
+        <Dropdown
+          id="more-dropdown-2"
+          menuData={tableRowMoreData}
+          align="right"
+        >
+          <Button
+            type="ghost"
+            size="l"
+            isIconMode={true}
+            iconOnly={<MoreVerticalLineIcon />}
+          />
+        </Dropdown>
       </span>
     ),
   },
@@ -85,7 +124,18 @@ export const trackerRowData = [
     byte: '100MB',
     more: (
       <span className="more-button">
-        <MoreVerticalLineIcon />
+        <Dropdown
+          id="more-dropdown-3"
+          menuData={tableRowMoreData}
+          align="right"
+        >
+          <Button
+            type="ghost"
+            size="l"
+            isIconMode={true}
+            iconOnly={<MoreVerticalLineIcon />}
+          />
+        </Dropdown>
       </span>
     ),
   },
@@ -101,7 +151,18 @@ export const trackerRowData = [
     byte: '100MB',
     more: (
       <span className="more-button">
-        <MoreVerticalLineIcon />
+        <Dropdown
+          id="more-dropdown-4"
+          menuData={tableRowMoreData}
+          align="right"
+        >
+          <Button
+            type="ghost"
+            size="l"
+            isIconMode={true}
+            iconOnly={<MoreVerticalLineIcon />}
+          />
+        </Dropdown>
       </span>
     ),
   },
@@ -117,7 +178,18 @@ export const trackerRowData = [
     byte: '100MB',
     more: (
       <span className="more-button">
-        <MoreVerticalLineIcon />
+        <Dropdown
+          id="more-dropdown-5"
+          menuData={tableRowMoreData}
+          align="right"
+        >
+          <Button
+            type="ghost"
+            size="l"
+            isIconMode={true}
+            iconOnly={<MoreVerticalLineIcon />}
+          />
+        </Dropdown>
       </span>
     ),
   },
@@ -133,7 +205,18 @@ export const trackerRowData = [
     byte: '100MB',
     more: (
       <span className="more-button">
-        <MoreVerticalLineIcon />
+        <Dropdown
+          id="more-dropdown-6"
+          menuData={tableRowMoreData}
+          align="right"
+        >
+          <Button
+            type="ghost"
+            size="l"
+            isIconMode={true}
+            iconOnly={<MoreVerticalLineIcon />}
+          />
+        </Dropdown>
       </span>
     ),
   },
