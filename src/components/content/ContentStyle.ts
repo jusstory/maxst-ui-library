@@ -72,6 +72,7 @@ export const TableBoxStyle = styled.div`
       .mds-box-group {
         margin-top: 20px;
         justify-content: space-between;
+
         .button__icon-ghost-l--default.icon-button-only {
           svg {
             color: #9e9e9e;
@@ -101,6 +102,7 @@ export const TableBoxStyle = styled.div`
 
           .icon-finished {
             svg {
+              display: block;
               width: 20px;
               height: 20px;
               color: #109eff;

@@ -1,9 +1,13 @@
 import Head from 'next/head';
-import { Container, Switch } from '@maxst-designsystem/maxst-design-system';
+import {
+  Container,
+  Switch,
+  Sidebar,
+} from '@maxst-designsystem/maxst-design-system';
 import ButtonGroups from '@/components/ButtonGroup';
 import { Main } from '@/layout/main/MainStyle';
-import { Sidebar } from '@maxst-designsystem/maxst-design-system';
 import { ContentRight } from '@components/content';
+import { MyContainer } from '@layout/container/ContainerStyle';
 
 const sidebarData = [
   {
@@ -27,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <Container>
+        <MyContainer>
           <Sidebar
             id="sidebar"
             itemData={sidebarData}
@@ -35,7 +39,7 @@ export default function Home() {
           />
           {/* <ButtonGroups /> */}
           <ContentRight />
-        </Container>
+        </MyContainer>
       </Main>
     </>
   );

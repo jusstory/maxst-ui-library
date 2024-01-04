@@ -24,8 +24,10 @@ import {
   TableViewFillIcon,
   DocumentLineIcon,
   CheckCircleFillIcon,
+  UserLineIcon,
 } from '@maxst-designsystem/icons';
 import { trackerColumnData, trackerRowData } from '@api/tableData';
+import { breadcrumbMenuData } from '@api/menuData';
 
 type tabelColumnDataType = {
   [id: string]: any;
@@ -79,10 +81,16 @@ function ContentRight() {
     <ContentRightBoxStyle>
       <Container>
         <ContentHeaderStyle>
-          <Breadcrumb
-            menuData={[{ id: 'vps-tracker', label: 'VPS Tracker' }]}
-            thisPage="vps-tracker"
-          />
+          <div className="breadcrumb-box">
+            <Breadcrumb
+              homeButton={{
+                id: 'home',
+                onMoveHome: () => console.log('home click'),
+              }}
+              menuData={breadcrumbMenuData}
+              thisPage="vps-tracker"
+            />
+          </div>
           <Title size="l" role={2} type={'title'}>
             VPS Tracker
           </Title>
