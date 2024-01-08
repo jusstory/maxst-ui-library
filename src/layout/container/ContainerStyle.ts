@@ -6,6 +6,10 @@ const MyContainer = styled(Container)`
   ${({ theme }) => {
     return css`
       display: flex;
+
+      .mds-sidebar {
+        flex: none;
+      }
     `;
   }}
 `;

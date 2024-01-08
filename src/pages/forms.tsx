@@ -1,13 +1,8 @@
 import React from 'react';
 import FormArea from '@/components/FormArea';
-import { Container } from '@maxst-designsystem/maxst-design-system';
 
 function forms() {
-  return (
-    <Container>
-      <FormArea />
-    </Container>
-  );
+  return <FormArea />;
 }
 
 export default forms;

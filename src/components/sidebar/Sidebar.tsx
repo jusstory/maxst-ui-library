@@ -26,6 +26,7 @@ function MySidebar() {
       router.push('/forms');
     }
   };
+
   return (
     <Sidebar
       id="sidebar"
