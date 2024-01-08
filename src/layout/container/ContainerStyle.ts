@@ -1,6 +1,6 @@
 // styled-component
 import styled, { css } from 'styled-components';
-import { Container } from '@maxst-designsystem/maxst-design-system';
+import { Container, Form } from '@maxst-designsystem/maxst-design-system';
 
 const MyContainer = styled(Container)`
   ${({ theme }) => {
@@ -10,4 +10,12 @@ const MyContainer = styled(Container)`
   }}
 `;
 
-export { MyContainer };
+const MyForm = styled(Form)`
+  ${({ theme }) => {
+    return css`
+      padding-left: 50px;
+    `;
+  }}
+`;
+
+export { MyContainer, MyForm };
