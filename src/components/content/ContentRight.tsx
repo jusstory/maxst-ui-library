@@ -6,6 +6,7 @@ import {
   Button,
   Checkbox,
   Divider,
+  Pagination,
   SearchBar,
   Table,
   Text,
@@ -134,7 +135,14 @@ function ContentRight() {
             columnData={trackerColumnData}
             rowData={rowData ? rowData : []}
             checkMode={true}
-          ></Table>
+          />
+          <Pagination
+            size={'s'}
+            totalPage={4}
+            showFirstButton
+            showLastButton
+            showPageSizeChanger
+          />
         </TableBoxStyle>
       </Container>
     </ContentRightBoxStyle>
