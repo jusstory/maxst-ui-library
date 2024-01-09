@@ -11,6 +11,7 @@ import {
   Table,
   Text,
   Title,
+  Modal,
 } from '@maxst-designsystem/maxst-design-system';
 import {
   ContentRightBoxStyle,
@@ -49,6 +50,28 @@ type tableRowDataType = {
 
 function ContentRight() {
   const [rowData, setRowData] = useState<any>();
+  const [openModalGroup, setOpenModalGroup] = useState<boolean>(false);
+  const [openModalSpace, setOpenModalSpace] = useState<boolean>(false);
+
+  const onClickTableRow = (data: any) => {
+    console.log('click table row', data);
+  };
+
+  const onCloseModalSpace = () => {
+    setOpenModalSpace(false);
+  };
+
+  const onCloseModalGroup = () => {
+    setOpenModalGroup(false);
+  };
+
+  const onButtonClick = (button: string) => {
+    if (button === 'space') {
+      setOpenModalSpace(true);
+    } else if (button === 'group') {
+      setOpenModalGroup(true);
+    }
+  };
 
   useEffect(() => {
     if (trackerRowData) {
@@ -105,10 +128,20 @@ function ContentRight() {
           <BoxGroup>
             <ButtonBox>
               <Checkbox id={'checkbox'} size={'s'}></Checkbox>
-              <Button type="secondary" size="l" iconLeft={<PlusLineIcon />}>
+              <Button
+                type="secondary"
+                size="l"
+                iconLeft={<PlusLineIcon />}
+                onClick={() => onButtonClick('space')}
+              >
                 공간 생성
               </Button>
-              <Button type="secondary" size="l" iconLeft={<PlusLineIcon />}>
+              <Button
+                type="secondary"
+                size="l"
+                iconLeft={<PlusLineIcon />}
+                onClick={() => onButtonClick('group')}
+              >
                 그룹 생성
               </Button>
             </ButtonBox>
@@ -135,6 +168,7 @@ function ContentRight() {
             columnData={trackerColumnData}
             rowData={rowData ? rowData : []}
             checkMode={true}
+            onClick={onClickTableRow}
           />
           <Pagination
             size={'s'}
@@ -144,6 +178,40 @@ function ContentRight() {
             showPageSizeChanger
           />
         </TableBoxStyle>
+        <Modal
+          id="modal-group"
+          mainButton={{
+            type: 'secondary',
+            text: '생성',
+            onClick: () => console.log(123),
+          }}
+          subButton={{
+            text: '취소',
+            onClick: () => console.log(123),
+          }}
+          title="그룹 생성"
+          open={openModalGroup}
+          onClose={onCloseModalGroup}
+        >
+          <Text size="l">그룹을 생성하시겠습니까?</Text>
+        </Modal>
+        <Modal
+          id="modal-space"
+          mainButton={{
+            type: 'secondary',
+            text: '생성',
+            onClick: () => console.log(123),
+          }}
+          subButton={{
+            text: '취소',
+            onClick: () => console.log(123),
+          }}
+          open={openModalSpace}
+          onClose={onCloseModalSpace}
+          title="공간 생성"
+        >
+          <Text size="l">공간을 생성하시겠습니까?</Text>
+        </Modal>
       </Container>
     </ContentRightBoxStyle>
   );
