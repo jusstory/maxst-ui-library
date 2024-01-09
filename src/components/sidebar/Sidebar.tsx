@@ -2,6 +2,9 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { Sidebar } from '@maxst-designsystem/maxst-design-system';
 
+interface sidebarType {
+  selectedId?: string;
+}
 const sidebarData = [
   {
     id: 'dashboard',
@@ -19,11 +22,13 @@ const sidebarData = [
   },
 ];
 
-function MySidebar() {
+function MySidebar({ selectedId }: sidebarType) {
   const router = useRouter();
   const onClickSidebar = (data: any) => {
     if (data.id === 'form') {
       router.push('/forms');
+    } else if (data.id === 'vps-tracker') {
+      router.push('/');
     }
   };
 
@@ -31,7 +36,7 @@ function MySidebar() {
     <Sidebar
       id="sidebar"
       itemData={sidebarData}
-      selectedId="vps-tracker"
+      selectedId={selectedId ? selectedId : '/'}
       onClick={onClickSidebar}
     />
   );

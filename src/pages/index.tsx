@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MyContainer>
-        <Sidebar />
+        <Sidebar selectedId="vps-tracker" />
         {/* <ButtonGroups /> */}
         <ContentRight />
       </MyContainer>
