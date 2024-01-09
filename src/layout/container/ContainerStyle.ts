@@ -18,6 +18,11 @@ const MyForm = styled(Form)`
   ${({ theme }) => {
     return css`
       padding-left: 50px;
+
+      .dropdown__phon-num {
+        width: 100px !important;
+        flex: none;
+      }
     `;
   }}
 `;

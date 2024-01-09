@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Button,
   ButtonGroup,
-  Form,
   InputGroup,
   TextField,
   Checkbox,
@@ -12,13 +11,10 @@ import {
   Dropdown,
   Title,
 } from '@maxst-designsystem/maxst-design-system';
-import {
-  ArrowDownLineIcon,
-  CheckLineIcon,
-  ArrowRightLineIcon,
-} from '@maxst-designsystem/icons';
+import { ArrowDownLineIcon } from '@maxst-designsystem/icons';
 import { MyContainer, MyForm } from '@layout/container/ContainerStyle';
 import Sidebar from '@components/sidebar';
+import { phonData } from '@api/menuData';
 
 type formDataType = {
   id: string | null;
@@ -35,6 +31,8 @@ function FormArea() {
   const [idError, setIdError] = useState<boolean>(false);
   const [passwordError, setPasswordError] = useState<boolean>(false);
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const [labelValue, setLabelValue] = useState<string>('');
+  const [idValue, setIdValue] = useState<string>('');
 
   const onChangeId = (value: any) => {
     setFormData({ ...formData, id: value });
@@ -66,10 +64,12 @@ function FormArea() {
 
   const onClickMenu = (data: any) => {
     console.log('click data', data);
+    setIdValue(data.id);
+    setLabelValue(data.label);
   };
 
   const onChangeMenu = (data: any) => {
-    console.log('change data', data);
+    // console.log('change data', data);
   };
 
   const onSubmit = () => {
@@ -107,37 +107,21 @@ function FormArea() {
           state={passwordError ? 'error' : 'default'}
         >
           <TextField
-            id="default-textfield-03"
+            id="default-textfield-02"
             placeholder="placeholder"
-            password={true}
+            password
             onChange={onChangePassword}
           />
         </InputGroup>
         <InputGroup
           fullWidth={true}
-          label="Id"
+          label="소속"
           helperText="helper text"
-          required={true}
-          state={idError ? 'error' : 'default'}
-        >
-          <TextField
-            id="default-textfield-01"
-            placeholder="placeholder"
-            resetButton={true}
-            onChange={onChangeId}
-          />
-        </InputGroup>
-        <InputGroup
-          fullWidth={true}
-          label="Password"
-          helperText="helper text"
-          required={true}
           state={passwordError ? 'error' : 'default'}
         >
           <TextField
-            id="default-textfield-03"
+            id="default-textfield-04"
             placeholder="placeholder"
-            password={true}
             onChange={onChangePassword}
           />
         </InputGroup>
@@ -148,30 +132,32 @@ function FormArea() {
           required={true}
         >
           <Dropdown
-            menuData={menuData}
+            menuData={phonData}
             onChange={onChangeMenu}
             onClick={onClickMenu}
             id="phone-01"
-            className="dropdown-example"
+            className="dropdown__phon-num"
           >
             <TextField
-              id=""
+              id={idValue}
+              value={labelValue}
               required={true}
               placeholder="placeholder"
               iconRight={<ArrowDownLineIcon />}
+              readOnly
             />
           </Dropdown>
           <TextField
             id="phone-02"
             placeholder="placeholder"
-            password={true}
             onChange={onChangePassword}
+            type="number"
           />
           <TextField
             id="phone-03"
             placeholder="placeholder"
-            password={true}
             onChange={onChangePassword}
+            type="number"
           />
         </InputGroup>
         <Checkbox id="login-checkbox" size="l" label="Save Password" />
@@ -246,46 +232,6 @@ function FormArea() {
   );
 }
 
-const menuData = [
-  {
-    id: 'label-0',
-    label: 'label 0',
-    iconLeft: <CheckLineIcon />,
-    iconRight: <ArrowRightLineIcon />,
-    disabled: false,
-    subLabel: 'more',
-  },
-  {
-    id: 'label-1',
-    label: 'label 1',
-    iconLeft: <CheckLineIcon />,
-    iconRight: <ArrowRightLineIcon />,
-    disabled: true,
-    // subLabel: 'more',
-  },
-  {
-    id: 'label-2',
-    label: 'label 2',
-    iconRight: <ArrowRightLineIcon />,
-    disabled: false,
-    subLabel: 'more',
-  },
-  {
-    id: 'label-3',
-    label: 'label 3',
-    iconLeft: <CheckLineIcon />,
-    disabled: false,
-    subLabel: 'more',
-  },
-  {
-    id: 'label-4',
-    label: 'label 4',
-    iconLeft: <CheckLineIcon />,
-    iconRight: <ArrowRightLineIcon />,
-    disabled: false,
-    // subLabel: 'more',
-  },
-];
 // const FormBox = styled.div`
 //   width: 500px;
 // `;
