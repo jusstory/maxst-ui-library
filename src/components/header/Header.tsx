@@ -13,7 +13,7 @@ function Header() {
     <HeaderStyles>
       <Container>
         <div className="logo">
-          <img src="./images/logo.png" alt="logo" />
+          <img src="./logo.png" alt="logo" />
         </div>
         <nav className="nav">
           <Button type="ghost" size="l">

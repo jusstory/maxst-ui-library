@@ -9,11 +9,7 @@ const Main = styled.main`
 
 const Box = styled.div`
   ${({ theme }) => {
-    return css`
-      .font-title {
-        color: blue;
-      }
-    `;
+    return css``;
   }}
 `;
 
