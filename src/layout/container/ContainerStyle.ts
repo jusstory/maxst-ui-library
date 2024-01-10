@@ -11,9 +11,6 @@ const MyContainer = styled(Container)`
         flex: none;
       } */
       ${theme.media.tablet} {
-        .mds-sidebar {
-          display: none;
-        }
       }
     `;
   }}

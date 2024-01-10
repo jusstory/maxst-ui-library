@@ -12,9 +12,6 @@ export const ContainerStyles = styled.div`
       box-sizing: border-box;
       margin-top: 40px;
 
-      .mds-sidebar {
-      }
-
       ${theme.media.tablet} {
       }
     `;

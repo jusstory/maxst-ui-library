@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { Sidebar } from '@maxst-designsystem/maxst-design-system';
 import { SidebarStyle } from './SiderStyle';
 
 interface sidebarType {

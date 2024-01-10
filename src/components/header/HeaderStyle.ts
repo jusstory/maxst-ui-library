@@ -4,12 +4,11 @@ import styled, { css } from 'styled-components';
 export const HeaderStyles = styled.div`
   ${({ theme }) => {
     return css`
-      padding: 8px 0;
-
       & > div {
         display: flex;
         justify-content: start;
         align-items: center;
+        position: relative;
       }
       .logo {
         padding-right: 28px;
@@ -29,7 +28,30 @@ export const HeaderStyles = styled.div`
         justify-content: center;
       }
 
+      .mobile__menu-button {
+        display: none;
+      }
+
       ${theme.media.tablet} {
+        & > div {
+          justify-content: center;
+        }
+
+        .nav {
+          display: none;
+
+          & + .right-box {
+            display: none;
+          }
+        }
+
+        .mobile__menu-button {
+          display: block;
+          position: absolute;
+          left: 56px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
     `;
   }}
