@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Sidebar } from '@maxst-designsystem/maxst-design-system';
+import { SidebarStyle } from './SiderStyle';
 
 interface sidebarType {
   selectedId?: string;
@@ -48,7 +49,7 @@ function MySidebar({ selectedId }: sidebarType) {
   }, [router]);
 
   return (
-    <Sidebar
+    <SidebarStyle
       id="sidebar"
       itemData={sidebarData}
       selectedId={thisPage}

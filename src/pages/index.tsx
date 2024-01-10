@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import ButtonGroups from '@/components/ButtonGroup';
-import { Main } from '@/layout/main/MainStyle';
+import { Main, Box } from '@/layout/main/MainStyle';
 import { ContentRight } from '@components/content';
 import { MyContainer } from '@layout/container/ContainerStyle';
 import Sidebar from '@components/sidebar';
@@ -16,6 +16,7 @@ export default function Home() {
       </Head>
       <MyContainer>
         <Sidebar selectedId="vps-tracker" />
+        {/* <Box>weqwe</Box> */}
         {/* <ButtonGroups /> */}
         <ContentRight />
       </MyContainer>

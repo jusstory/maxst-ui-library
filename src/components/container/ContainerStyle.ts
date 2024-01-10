@@ -15,7 +15,7 @@ export const ContainerStyles = styled.div`
       .mds-sidebar {
       }
 
-      ${theme.media.table} {
+      ${theme.media.tablet} {
       }
     `;
   }}

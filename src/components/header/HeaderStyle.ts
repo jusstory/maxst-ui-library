@@ -29,7 +29,7 @@ export const HeaderStyles = styled.div`
         justify-content: center;
       }
 
-      ${theme.media.table} {
+      ${theme.media.tablet} {
       }
     `;
   }}

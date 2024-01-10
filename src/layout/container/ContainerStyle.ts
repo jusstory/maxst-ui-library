@@ -7,8 +7,13 @@ const MyContainer = styled(Container)`
     return css`
       display: flex;
 
-      .mds-sidebar {
+      /* .mds-sidebar {
         flex: none;
+      } */
+      ${theme.media.tablet} {
+        .mds-sidebar {
+          display: none;
+        }
       }
     `;
   }}

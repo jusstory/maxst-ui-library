@@ -10,7 +10,7 @@ export const ContentRightBoxStyle = styled.div`
       & > div {
         margin-top: 0;
       }
-      ${theme.media.table} {
+      ${theme.media.tablet} {
       }
     `;
   }}
@@ -41,7 +41,7 @@ export const ContentHeaderStyle = styled.div`
         bottom: 14px;
       }
 
-      ${theme.media.table} {
+      ${theme.media.tablet} {
       }
     `;
   }}
@@ -58,7 +58,7 @@ export const ButtonBox = styled.div`
         margin-right: 12px;
       }
 
-      ${theme.media.table} {
+      ${theme.media.tablet} {
       }
     `;
   }}
@@ -111,7 +111,7 @@ export const TableBoxStyle = styled.div`
         }
       }
 
-      ${theme.media.table} {
+      ${theme.media.tablet} {
       }
     `;
   }}

@@ -9,7 +9,13 @@ const Main = styled.main`
 
 const Box = styled.div`
   ${({ theme }) => {
-    return css``;
+    return css`
+      width: 100%;
+
+      ${theme.media.tablet} {
+        /* display: none; */
+      }
+    `;
   }}
 `;
 
