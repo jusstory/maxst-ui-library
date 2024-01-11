@@ -12,6 +12,10 @@ const Box = styled.div`
     return css`
       width: 100%;
 
+      &.dashboard-contents {
+        padding: 0 56px;
+      }
+
       ${theme.media.tablet} {
         /* display: none; */
       }
