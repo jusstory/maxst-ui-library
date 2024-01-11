@@ -26,10 +26,10 @@ function MySidebar({ selectedId }: sidebarType) {
   const router = useRouter();
   const [thisPage, setThisPage] = useState<string>('/');
   const onClickSidebar = (data: any) => {
-    if (data.id === 'forms') {
-      router.push('/forms');
-    } else if (data.id === 'vps-tracker') {
+    if (data.id === 'vps-tracker') {
       router.push('/');
+    } else {
+      router.push(`/${data.id}`);
     }
   };
 
