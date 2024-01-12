@@ -1,6 +1,69 @@
-import { Sidebar } from '@maxst-designsystem/maxst-design-system';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
 import { HeaderSidebarStyle } from './SiderStyle';
+
+interface sidebarType {
+  selectedId?: string;
+}
+
+const sidebarData = [
+  {
+    id: 'dashboard',
+    label: 'Dashboard',
+  },
+
+  {
+    id: 'vps-tracker',
+    label: 'VPS Tracker',
+  },
+
+  {
+    id: 'forms',
+    label: 'Form',
+  },
+];
+
+function MobileSidebar({ selectedId }: sidebarType) {
+  const router = useRouter();
+  const [thisPage, setThisPage] = useState<string>('/');
+  const onClickSidebar = (data: any) => {
+    console.log(data);
+    // if (data.id === 'vps-tracker') {
+    //   router.push('/');
+    // } else {
+    //   router.push(`/${data.id}`);
+    // }
+    router.push(`/${data.id}`);
+  };
+
+  // useEffect(() => {
+  //   selectedId && console.log('selectedId', selectedId);
+  //   selectedId && setThisPage(selectedId);
+  // }, [selectedId]);
+
+  useEffect(() => {
+    const thisRouter = window.location.pathname.split('/');
+    const thisLocation = thisRouter[thisRouter.length - 1];
+    console.log('thisLocation', thisLocation);
+    // if (thisLocation === '') {
+    //   setThisPage('vps-tracker');
+    // } else {
+    //   setThisPage(thisLocation);
+    // }
+    setThisPage(thisLocation);
+  }, [router]);
+
+  return (
+    <HeaderSidebarStyle
+      id="sidebar-mobile"
+      itemData={sidebarData}
+      // selectedId={thisPage}
+      onClick={onClickSidebar}
+    />
+  );
+}
+
+export default MobileSidebar;
 
 const mobileSidebarMenuData = [
   {
@@ -58,9 +121,3 @@ const mobileSidebarMenuData = [
     label: 'depth-06default',
   },
 ];
-
-function MobileSidebar() {
-  return <HeaderSidebarStyle id="sidebar" itemData={mobileSidebarMenuData} />;
-}
-
-export default MobileSidebar;

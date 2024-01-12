@@ -80,7 +80,7 @@ function FormArea() {
 
   return (
     <MyContainer>
-      <Sidebar selectedId="vps-tracker" />
+      {/* <Sidebar selectedId="forms" /> */}
       <MyForm id="form-login">
         <Title role={2} type={'title'} size={'s'}>
           Form

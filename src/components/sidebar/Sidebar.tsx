@@ -26,11 +26,12 @@ function MySidebar({ selectedId }: sidebarType) {
   const router = useRouter();
   const [thisPage, setThisPage] = useState<string>('/');
   const onClickSidebar = (data: any) => {
-    if (data.id === 'vps-tracker') {
-      router.push('/');
-    } else {
-      router.push(`/${data.id}`);
-    }
+    // if (data.id === 'vps-tracker') {
+    //   router.push('/');
+    // } else {
+    //   router.push(`/${data.id}`);
+    // }
+    router.push(`/${data.id}`);
   };
 
   useEffect(() => {
@@ -40,18 +41,19 @@ function MySidebar({ selectedId }: sidebarType) {
   useEffect(() => {
     const thisRouter = window.location.pathname.split('/');
     const thisLocation = thisRouter[thisRouter.length - 1];
-    if (thisLocation === '') {
-      setThisPage('vps-tracker');
-    } else {
-      setThisPage(thisLocation);
-    }
+    // if (thisLocation === '') {
+    //   setThisPage('vps-tracker');
+    // } else {
+    //   setThisPage(thisLocation);
+    // }
+    setThisPage(thisLocation);
   }, [router]);
 
   return (
     <SidebarStyle
       id="sidebar"
       itemData={sidebarData}
-      selectedId={thisPage}
+      // selectedId={thisPage}
       onClick={onClickSidebar}
     />
   );
