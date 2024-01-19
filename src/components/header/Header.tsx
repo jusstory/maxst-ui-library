@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HeaderStyles } from './HeaderStyle';
 import Container from '@components/container';
 import {
@@ -13,8 +13,11 @@ import {
   MenuLineIcon,
 } from '@maxst-designsystem/icons';
 import MobileSidebar from '@components/sidebar/MobileSidebar';
+import { useRouter } from 'next/router';
 
 function Header() {
+  const router = useRouter();
+  const [thisPage, setThisPage] = useState<string>('/');
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState<boolean>(false);
 
   const onOpenMobileDrawer = () => {
@@ -51,6 +54,19 @@ function Header() {
       </div>
     );
   };
+
+  useEffect(() => {
+    const thisRouter = window.location.pathname.split('/');
+    const thisLocation = thisRouter[thisRouter.length - 1];
+    console.log('thisLocation', thisLocation);
+    // if (thisLocation === '') {
+    //   setThisPage('vps-tracker');
+    // } else {
+    //   setThisPage(thisLocation);
+    // }
+    setThisPage(thisLocation);
+  }, [router]);
+
   return (
     <HeaderStyles>
       <Container>
@@ -109,7 +125,7 @@ function Header() {
           width="400px"
           footer={<RightBox />}
         >
-          <MobileSidebar />
+          <MobileSidebar selectedId={thisPage} />
         </Drawer>
       </Container>
     </HeaderStyles>

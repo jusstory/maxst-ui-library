@@ -15,10 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MyContainer>
-        <Sidebar selectedId="vps-tracker" />
-        {/* <Box>weqwe</Box> */}
+        <Sidebar selectedId="/" />
+        <Box>weqwe</Box>
         {/* <ButtonGroups /> */}
-        <ContentRight />
+        {/* <ContentRight /> */}
       </MyContainer>
     </>
   );
