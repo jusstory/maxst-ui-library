@@ -1,5 +1,5 @@
 import React from 'react';
-import { SlideButtonStyles } from './ContainerStyle';
+import { SlideButtonStyles } from './SliderButtonStyle';
 
 function SlideButton() {
   return (
