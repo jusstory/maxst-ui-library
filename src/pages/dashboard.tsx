@@ -4,6 +4,7 @@ import Sidebar from '@components/sidebar';
 import { RippleButton } from '@components/button';
 import { Title } from '@maxst-designsystem/maxst-design-system';
 import { Box } from '@layout/main/MainStyle';
+import SlideButton from '@components/button/SlideButton';
 
 function dashboard() {
   return (
@@ -16,6 +17,8 @@ function dashboard() {
           interaction test
         </Title>
         <RippleButton />
+        <br />
+        <SlideButton />
       </Box>
     </MyContainer>
   );
