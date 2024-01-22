@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@maxst-designsystem/icons": "^0.5.17",
-    "@maxst-designsystem/maxst-design-system": "^1.0.6",
+    "@maxst-designsystem/maxst-design-system": "^1.0.8",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
