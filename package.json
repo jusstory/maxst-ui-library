@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "@maxst-designsystem/icons": "^0.5.17",
     "@maxst-designsystem/maxst-design-system": "^1.0.8",
     "@types/node": "20.6.0",

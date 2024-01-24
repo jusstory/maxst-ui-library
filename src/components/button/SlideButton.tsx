@@ -36,7 +36,7 @@ function SlideButton() {
               stroke="black"
             ></path>
           </g>
-          <g className="hover" clip-path="url(#clip-slide-button)">
+          <g className="hover" clipPath="url(#clip-slide-button)">
             <path
               className="border"
               d="M0.5 12.3806C0.5 11.2234 0.945841 10.1106 1.7449 9.27351L8.79006 1.89286C9.63919 1.0033 10.8154 0.5 12.0452 0.5H45C47.4853 0.5 49.5 2.51472 49.5 5V45C49.5 47.4853 47.4853 49.5 45 49.5H5C2.51472 49.5 0.5 47.4853 0.5 45V12.3806Z"

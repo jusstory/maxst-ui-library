@@ -5,6 +5,7 @@ import { RippleButton } from '@components/button';
 import { Title } from '@maxst-designsystem/maxst-design-system';
 import { Box } from '@layout/main/MainStyle';
 import SlideButton from '@components/button/SlideButton';
+import { Controls, Player } from '@lottiefiles/react-lottie-player';
 
 function dashboard() {
   return (
@@ -19,6 +20,17 @@ function dashboard() {
         <RippleButton />
         <br />
         <SlideButton />
+        <Player
+          autoplay
+          loop
+          src="/images/lottie/lottie_flow.json"
+          style={{ height: '300px', width: '300px' }}
+        >
+          {/* <Controls
+            visible={true}
+            buttons={['play', 'repeat', 'frame', 'debug']}
+          /> */}
+        </Player>
       </Box>
     </MyContainer>
   );
