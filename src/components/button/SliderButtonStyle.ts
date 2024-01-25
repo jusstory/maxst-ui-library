@@ -63,3 +63,50 @@ export const SlideButtonStyles = styled.div`
     `;
   }}
 `;
+
+export const PolygonButton = styled.div`
+  ${({ theme }) => {
+    return css`
+      width: 280px;
+      height: 120px;
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+      /* border: 1px solid black; */
+      background-color: gray;
+      /* filter: drop-shadow(1.25em 0.75em 0px rgb(150, 223, 150)); */
+
+      button {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        clip-path: polygon(
+          calc(25% + 1px) 2px,
+          calc(100% - 2px) 2px,
+          calc(100% - 2px) calc(100% - 2px),
+          2px calc(100% - 2px),
+          2px calc(50% + 1px)
+        );
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 150%;
+          height: 300%;
+          background-color: purple;
+          transform: translateX(-90%) translateY(15%) rotate(45deg) scaleY(1);
+          transition: transform 0.4s;
+          opacity: 0.5;
+        }
+
+        &:hover {
+          &::before {
+            transform: translateX(-10%) translateY(-30%) rotate(45deg) scaleY(1);
+          }
+        }
+      }
+    `;
+  }}
+`;
