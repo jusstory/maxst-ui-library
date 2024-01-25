@@ -29,4 +29,12 @@ const MyForm = styled(Form)`
   }}
 `;
 
-export { MyContainer, MyForm };
+const LottieSampleBox = styled.div`
+  ${({ theme }) => {
+    return css`
+      width: 300px;
+    `;
+  }}
+`;
+
+export { MyContainer, MyForm, LottieSampleBox };
