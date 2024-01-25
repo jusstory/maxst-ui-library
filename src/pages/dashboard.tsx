@@ -20,6 +20,8 @@ function dashboard() {
         <RippleButton />
         <br />
         <SlideButton />
+        <br />
+        <br />
         <LottieLoadingSample01 />
       </Box>
     </MyContainer>
