@@ -10,21 +10,24 @@ const sidebarData = [
     id: 'dashboard',
     label: 'Dashboard',
   },
-
   {
     id: 'vps-tracker',
     label: 'VPS Tracker',
   },
-
   {
     id: 'forms',
     label: 'Form',
+  },
+  {
+    id: 'interaction-touch',
+    label: 'interaction-touch',
   },
 ];
 
 function MySidebar({ selectedId }: sidebarType) {
   const router = useRouter();
   const [thisPage, setThisPage] = useState<string>('/');
+
   const onClickSidebar = (data: any) => {
     // if (data.id === 'vps-tracker') {
     //   router.push('/');

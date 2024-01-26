@@ -70,9 +70,7 @@ export const PolygonButton = styled.div`
       width: 280px;
       height: 120px;
       clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
-      /* border: 1px solid black; */
       background-color: gray;
-      /* filter: drop-shadow(1.25em 0.75em 0px rgb(150, 223, 150)); */
       overflow: hidden;
 
       button {
