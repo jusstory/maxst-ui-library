@@ -33,6 +33,12 @@ const LottieSampleBox = styled.div`
   ${({ theme }) => {
     return css`
       width: 300px;
+
+      .hamster {
+        &:hover {
+          cursor: grab;
+        }
+      }
     `;
   }}
 `;
