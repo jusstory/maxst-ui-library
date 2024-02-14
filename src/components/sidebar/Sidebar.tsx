@@ -22,6 +22,10 @@ const sidebarData = [
     id: 'interaction-touch',
     label: 'interaction-touch',
   },
+  {
+    id: 'icon',
+    label: 'icon',
+  },
 ];
 
 function MySidebar({ selectedId }: sidebarType) {

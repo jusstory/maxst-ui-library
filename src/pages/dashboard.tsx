@@ -22,6 +22,9 @@ function dashboard() {
         <SlideButton />
         <br />
         <br />
+        <button>button</button>
+        <br />
+        <br />
         <LottieLoadingSample01 />
       </Box>
     </MyContainer>

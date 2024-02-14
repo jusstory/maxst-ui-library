@@ -3,10 +3,11 @@ import type { AppProps } from 'next/app';
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/theme';
-import '@maxst-designsystem/maxst-design-system/src/styles/scss/base/global-style.scss';
-import '@maxst-designsystem/maxst-design-system/src/styles/scss/main.scss';
+// import '@maxst-designsystem/maxst-design-system/src/styles/scss/base/global-style.scss';
+// import '@maxst-designsystem/maxst-design-system/src/styles/scss/main.scss';
 import BodyHeader from '@/components/BodyHeader';
 import Header from '@components/header';
+import { GlobalStyle } from '@styles/global-style';
 // import { Switch } from '@maxst-designsystem/maxst-design-system';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -24,8 +25,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <>
+        <GlobalStyle />
         {/* <Switch id="mode-change" label={'mode'} onClick={onClickSwitch} /> */}
         <Header />
+
         <BodyHeader />
         <Component {...pageProps} />
       </>

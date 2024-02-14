@@ -1,16 +1,16 @@
 import React from 'react';
-import FormArea from '@/components/FormArea';
+import IconArea from '@/components/IconArea';
 import { MyContainer } from '@layout/container/ContainerStyle';
 import Sidebar from '@components/sidebar';
 import { Box } from '@layout/main/MainStyle';
 function forms() {
   return (
     <MyContainer>
-      <Sidebar selectedId="dashboard" />
+      <Sidebar selectedId="icon" />
       {/* <Box>weqwe</Box> */}
       {/* <ButtonGroups /> */}
       <Box className="dashboard-contents">
-        <FormArea />
+        <IconArea />
       </Box>
     </MyContainer>
   );
