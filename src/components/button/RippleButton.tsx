@@ -6,14 +6,13 @@ const RippleButton = () => {
 
   const handleClick = (event: any) => {
     const rect = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-
+    const x = event.clientX - rect.left - rect.width / 2;
+    const y = event.clientY - rect.top - rect.height / 2;
     setRipple({ visible: true, x, y });
 
     setTimeout(() => {
       setRipple({ visible: false, x: 0, y: 0 });
-    }, 600); // 퍼지는 시간 조절 (600ms는 예시)
+    }, 400); // 퍼지는 시간 조절 (600ms는 예시)
   };
 
   return (
