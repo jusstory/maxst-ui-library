@@ -243,12 +243,6 @@ export const GlobalStyle = createGlobalStyle`${css`
       color: ${colors.gray.mid};
     }
   }
-
-  // summernote
-  .note-editor.note-frame .note-statusbar {
-    display: none;
-  }
-
   .primary-text {
     color: ${colors.primary.default} !important;
   }

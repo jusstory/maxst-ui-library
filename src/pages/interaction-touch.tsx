@@ -6,7 +6,7 @@ import Sidebar from '@components/sidebar';
 function InteractionButtons() {
   return (
     <MyContainer>
-      <Sidebar selectedId="interaction-buttons" />
+      <Sidebar selectedId="interaction-touch" />
       <CheckboxTouch />
     </MyContainer>
   );

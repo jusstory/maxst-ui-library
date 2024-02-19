@@ -39,6 +39,7 @@ function MySidebar({ selectedId }: sidebarType) {
     //   router.push(`/${data.id}`);
     // }
     router.push(`/${data.id}`);
+    setThisPage(data.id);
   };
 
   useEffect(() => {
@@ -60,7 +61,7 @@ function MySidebar({ selectedId }: sidebarType) {
     <SidebarStyle
       id="sidebar"
       itemData={sidebarData}
-      // selectedId={thisPage}
+      selectedId={thisPage}
       onClick={onClickSidebar}
     />
   );

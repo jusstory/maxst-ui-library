@@ -13,6 +13,7 @@ function dashboard() {
       <Sidebar selectedId="dashboard" />
       {/* <Box>weqwe</Box> */}
       {/* <ButtonGroups /> */}
+      <p>interaction test</p>
       <Box className="dashboard-contents">
         <Title size="l" role={2}>
           interaction test
