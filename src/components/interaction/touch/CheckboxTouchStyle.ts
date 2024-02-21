@@ -21,7 +21,7 @@ export const CheckboxTouchBox = styled.div`
           transform: scale(0);
           animation: ripple-animation 0.6s linear; */
           background-color: rgba(255, 255, 255, 0.8);
-          background-color: #0F9BB6; 
+          background-color: #657786; 
           pointer-events: none;
           width: calc(100% + 16px);
           height: calc(100% + 16px);
@@ -31,7 +31,7 @@ export const CheckboxTouchBox = styled.div`
           transform: scale(0);
           animation: ripple-animation 0.6s linear; */
           background-color: rgba(255, 255, 255, 0.8);
-          background-color: #0F9BB6; 
+          background-color: #657786; 
           pointer-events: none;
           width: calc(100% + 16px);
           height: calc(100% + 16px);
