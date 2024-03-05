@@ -4,24 +4,23 @@ import styled, { css } from 'styled-components';
 export const CheckboxTouchBox = styled.div`
   ${({ theme }) => {
     return css`
-      .mds-root .checkbox__l--default__primary::after {
+      .checkbox__l--default__primary::after {
         transition-property: background;
         transition-duration: 1s, 1s;
       }
-      .mds-root .radio__l--default.checked::after{
+      .radio__l--default.checked::after {
         transition-property: border;
         transition-duration: 0.3s, 0.8s;
-
       }
-      .mds-root .checkbox__l--default__primary.checked::after {
+      .checkbox__l--default__primary.checked::after {
         /* animation: ripple-animation 0.6s linear; */
       }
       .on {
         .checkbox::before {
           transform: scale(0);
-          animation: ripple-animation 0.6s linear; */
+          animation: ripple-animation 0.6s linear;
           background-color: rgba(255, 255, 255, 0.8);
-          background-color: #657786; 
+          background-color: #657786;
           pointer-events: none;
           width: calc(100% + 16px);
           height: calc(100% + 16px);
@@ -29,15 +28,14 @@ export const CheckboxTouchBox = styled.div`
         }
         .radio::before {
           transform: scale(0);
-          animation: ripple-animation 0.6s linear; */
+          animation: ripple-animation 0.6s linear;
           background-color: rgba(255, 255, 255, 0.8);
-          background-color: #657786; 
+          background-color: #657786;
           pointer-events: none;
           width: calc(100% + 16px);
           height: calc(100% + 16px);
           opacity: 0.5;
           border-radius: 50%;
-
         }
       }
 
