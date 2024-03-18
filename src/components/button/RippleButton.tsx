@@ -18,7 +18,8 @@ const RippleButton = () => {
   return (
     <div className={styles.rippleContainer}>
       <button onClick={handleClick} className={styles.rippleButton}>
-        Click me
+        <span>Click me</span>
+
         <span
           className={styles.ripple}
           style={{ left: ripple.x, top: ripple.y }}

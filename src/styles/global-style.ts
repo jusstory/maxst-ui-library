@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`${css`
       display: none; /* Chrome, Safari, Opera*/
     }
   }
-  html {
+  /* html {
     width: 100%;
   }
 
@@ -27,9 +27,9 @@ export const GlobalStyle = createGlobalStyle`${css`
     & > div {
       position: relative;
     }
-  }
+  } */
 
-  html,
+  /* html,
   body,
   div,
   span,
@@ -119,12 +119,10 @@ export const GlobalStyle = createGlobalStyle`${css`
     vertical-align: baseline;
 
     color: ${colors.gray.darker};
-
-    /* color: red; */
-  }
+  } */
 
   /* HTML5 display-role reset for older browsers */
-  article,
+  /* article,
   aside,
   details,
   figcaption,
@@ -159,10 +157,10 @@ export const GlobalStyle = createGlobalStyle`${css`
   table {
     border-collapse: collapse;
     border-spacing: 0;
-  }
+  } */
 
   /* button, input, select, textarea 초기화 */
-  button,
+  /* button,
   input,
   select,
   textarea {
@@ -186,10 +184,10 @@ export const GlobalStyle = createGlobalStyle`${css`
 
   button:focus {
     outline: none;
-  }
+  } */
 
   /* input 기본 스타일 초기화 */
-  input {
+  /* input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -197,15 +195,15 @@ export const GlobalStyle = createGlobalStyle`${css`
 
   input:focus {
     outline: none;
-  }
+  } */
 
   /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
-  input::-ms-clear {
+  /* input::-ms-clear {
     display: none;
-  }
+  } */
 
   /* input type number 에서 화살표 제거 */
-  input[type='number']::-webkit-inner-spin-button,
+  /* input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -235,10 +233,10 @@ export const GlobalStyle = createGlobalStyle`${css`
 
   pre {
     white-space: pre-wrap;
-  }
+  } */
 
   // form input 안내/에러 메세지
-  form {
+  /* form {
     div {
       color: ${colors.gray.mid};
     }
@@ -252,7 +250,7 @@ export const GlobalStyle = createGlobalStyle`${css`
       width: 28px;
       height: 28px;
     }
-  }
+  } */
 
   ${media.tablet} {
   }

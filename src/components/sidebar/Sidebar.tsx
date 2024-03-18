@@ -30,7 +30,7 @@ const sidebarData = [
 
 function MySidebar({ selectedId }: sidebarType) {
   const router = useRouter();
-  const [thisPage, setThisPage] = useState<string>('/');
+  const [thisPage, setThisPage] = useState<string>('');
 
   const onClickSidebar = (data: any) => {
     // if (data.id === 'vps-tracker') {
@@ -54,14 +54,14 @@ function MySidebar({ selectedId }: sidebarType) {
     // } else {
     //   setThisPage(thisLocation);
     // }
-    setThisPage(thisLocation);
+    // setThisPage(thisLocation);
   }, [router]);
 
   return (
     <SidebarStyle
       id="sidebar"
       itemData={sidebarData}
-      selectedId={thisPage}
+      selectMenu={thisPage}
       onClick={onClickSidebar}
     />
   );

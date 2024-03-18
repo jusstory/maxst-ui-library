@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MyContainer>
-        <Sidebar selectedId="/" />
+        <Sidebar selectedId="" />
         <Box>weqwe</Box>
         {/* <ButtonGroups /> */}
         {/* <ContentRight /> */}
