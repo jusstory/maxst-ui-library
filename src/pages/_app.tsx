@@ -1,13 +1,12 @@
 // import '@/styles/globals.css'
-import type { AppProps } from 'next/app';
 import { useState } from 'react';
+import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/theme';
-// import '@maxst-designsystem/maxst-design-system/src/styles/scss/base/global-style.scss';
-// import '@maxst-designsystem/maxst-design-system/src/styles/scss/main.scss';
 import BodyHeader from '@/components/BodyHeader';
-import Header from '@components/header';
+import Header from '@layout/header';
 import { GlobalStyle } from '@styles/global-style';
+import Footers from '@layout/footer';
 // import { Switch } from '@maxst-designsystem/maxst-design-system';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -31,6 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <BodyHeader />
         <Component {...pageProps} />
+        <Footers />
       </>
     </ThemeProvider>
   );
