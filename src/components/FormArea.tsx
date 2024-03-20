@@ -10,6 +10,7 @@ import {
   Divider,
   Dropdown,
   Title,
+  AutoComplete,
 } from '@maxst-designsystem/maxst-design-system';
 import { ArrowDownLineIcon } from '@maxst-designsystem/icons';
 import { MyContainer, MyForm } from '@layout/container/ContainerStyle';
@@ -119,11 +120,17 @@ function FormArea() {
           helperText="helper text"
           state={passwordError ? 'error' : 'default'}
         >
-          <TextField
-            id="default-textfield-04"
-            placeholder="placeholder"
-            onChange={onChangePassword}
-          />
+          <AutoComplete
+            className="auto-complete__searchbar"
+            id="auto-complete_searchbar"
+            menuData={autoCompleteData}
+          >
+            <TextField
+              id="default-textfield-04"
+              placeholder="placeholder"
+              onChange={onChangePassword}
+            />
+          </AutoComplete>
         </InputGroup>
         <InputGroup
           fullWidth={true}
@@ -196,6 +203,20 @@ function FormArea() {
           size="l"
           type="selected"
         />
+        <InputGroup
+          fullWidth={true}
+          label="default-textfield-02"
+          required={true}
+        >
+          <TextField
+            id="default-textfield-02"
+            helperText="helper text"
+            placeholder="placeholder"
+            multiLine={true}
+            minLength={2}
+            maxLength={22}
+          />
+        </InputGroup>
         <br />
         <Divider direction="horizontal" type="default" />
         <ButtonGroup align="right" buttonWidth="180px">
@@ -232,6 +253,53 @@ function FormArea() {
   );
 }
 
+const autoCompleteData = [
+  {
+    disabled: false,
+    id: 'menu-0',
+    label: 'menu 0',
+    subLabel: 'more',
+  },
+  {
+    disabled: false,
+    id: 'menu-00',
+    label: 'menu 00',
+    subLabel: 'more',
+  },
+  {
+    id: 'menu-1',
+    label: 'menu 1',
+  },
+  {
+    disabled: false,
+    id: 'menu-2',
+    label: 'menu 2',
+  },
+  {
+    disabled: false,
+    id: 'menu-3',
+    label: 'menu 3',
+    subLabel: 'more',
+  },
+  {
+    disabled: false,
+    id: 'menu-4',
+    label: 'menu 4',
+  },
+  {
+    disabled: true,
+    id: 'menu-5',
+    label: 'menu 5',
+  },
+  {
+    id: 'menu-6',
+    label: 'menu 6',
+  },
+  {
+    id: 'menu-7',
+    label: 'menu 7',
+  },
+];
 // const FormBox = styled.div`
 //   width: 500px;
 // `;

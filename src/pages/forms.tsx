@@ -6,9 +6,7 @@ import { Box } from '@layout/main/MainStyle';
 function forms() {
   return (
     <MyContainer>
-      <Sidebar selectedId="dashboard" />
-      {/* <Box>weqwe</Box> */}
-      {/* <ButtonGroups /> */}
+      <Sidebar selectedId="forms" />
       <Box className="dashboard-contents">
         <FormArea />
       </Box>
